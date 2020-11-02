@@ -73,5 +73,6 @@
 	padding: 10px 20px;
 	background: #ccc;
 }
-
-
+.delete-btn {
+	color: #f00;
+}
