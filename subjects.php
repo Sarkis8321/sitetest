@@ -6,7 +6,7 @@
 include $_SERVER['DOCUMENT_ROOT'].'/qwery/getSubjects.php';
 ?>
 
-<table>
+<table class="main-table">
     <thead>
         <tr>
             <td>id</td>

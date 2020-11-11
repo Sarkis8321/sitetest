@@ -3,8 +3,6 @@
 
 <h2 class="title">Список студентов</h2>
 
-<?php include "main-menu.php"?>
-
 <div class="main-content">
 	<?php include 'qwery/qwery.php' ?>
 	<table class="main-table">
