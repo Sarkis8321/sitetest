@@ -19,10 +19,13 @@ include $_SERVER['DOCUMENT_ROOT'].'/qwery/getTeachers.php';
 	<?php foreach($groupsArr as $key => $value) {?>
 		<tr>
 			<td><?php echo $value['id'] ?></td>
-			<td><?php echo $value['group_name'] ?></td>
+			<td>
+				<a href="<?=  '/groupById.php?groupid='.$value['id'].'&groupname='.$value['group_name']  ?>">
+					<?php echo $value['group_name'] ?>
+				</a>
+			</td>
 			<td><?php echo $value['course'] ?></td>
             <td><?php echo $value['teacher_id'] ?></td>
-     
 		</tr>
 	<?php } ?>
   </tbody>

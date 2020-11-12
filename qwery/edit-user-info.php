@@ -7,11 +7,11 @@ $user = $user_info->fetch_assoc();
 $db->close(); 
 ?>
 
-
 <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
 
-<h1>Редактирование информации о студенте</h1>
+<?php include 'getGroupsFromEditStudent.php'?>
 
+<h1>Редактирование информации о студенте</h1>
 
 <form action="update-student.php" method="POST" >
 
@@ -25,6 +25,15 @@ $db->close();
     
     <label for="age">Возраст:</label>
 	<input type="number" id="age" name="age" value="<? echo $user['age']?>"><br/>
+
+    <select name="group_id">
+		<?php foreach($groupsArr as $key => $value) {?>
+
+			<option value="<?= $value['id'] ?>"><?= $value['group_name']?></option>
+
+		<?php }?>
+	</select>
+
 
 	<button>Изменить</button>
 </form>
