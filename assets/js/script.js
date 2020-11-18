@@ -5,6 +5,7 @@ let closeBtn = document.querySelector('#close-btn');
 addStudent.addEventListener('click', (evt)=>{
 	evt.preventDefault;
 	formAdd.classList.add('active');
+
 });
 
 closeBtn.addEventListener('click', (evt)=>{

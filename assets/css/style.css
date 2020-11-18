@@ -42,16 +42,16 @@
 }
 .form-add .close-btn {
 	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: 20px;
-	height: 20px;
-	text-align: center;
-	border: 1px solid #000;
-	cursor: pointer;
-	border-radius: 50%;
-	padding: 3px 1px 0 1px;
-	transition: all .3s;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0px 1px 0 1px;
+    transition: all .3s;
 }
 .form-add .close-btn:hover {
 	background: #000;
@@ -62,17 +62,4 @@
 	margin: 10px auto 10px auto;
 	width: 150px;
 	height: 30px;
-}
-.main-menu ul{
-	list-style: none;
-	padding: 0;
-	display: flex;
-	justify-content: flex-start;
-}
-.main-menu ul li a{
-	padding: 10px 20px;
-	background: #ccc;
-}
-.delete-btn {
-	color: #f00;
 }

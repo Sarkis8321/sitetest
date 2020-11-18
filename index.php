@@ -2,14 +2,14 @@
 <?php include 'modal-form-add.php'?>
 
 
-	<a href="#" id="add-student">Добавить студентов</a>
+	<a href="#" id="add-student" class="btn btn-success">Добавить студентов</a>
 	
 
 <h2 class="title">Список студентов</h2>
 
 <div class="main-content">
 	<?php include 'qwery/qwery.php' ?>
-	<table class="main-table">
+	<table class="table table-hover table-dark">
 	<thead>
 		<tr>
 			<td>id</td>
@@ -25,8 +25,8 @@
 			<td><?php echo $value['name'] ?></td>
 			<td><?php echo $value['surname'] ?></td>
       <td><?php echo $value['age'] ?></td>
-      <td><a class="delete-btn" href="/qwery/edit-user-info.php?userid=<?echo $value['id']; ?>">изменить</a></td>
-      <td><a class="delete-btn" href="/qwery/deleteStudent.php?userid=<?echo $value['id']; ?>">удалить</a></td>
+      <td><a class="edit-btn" href="/qwery/edit-user-info.php?userid=<?echo $value['id']; ?>"><img src="/assets/img/edit.svg" alt=""></a></td>
+      <td><a class="delete-btn" href="/qwery/deleteStudent.php?userid=<?echo $value['id']; ?>"><img src="/assets/img/delete.svg" alt=""></a></td>
 		</tr>
 	<?php } ?>
   </tbody>
