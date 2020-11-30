@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -31,6 +33,11 @@
             height: 40px;
             margin: 10px auto;
         }
+        form span {
+            display: block;
+            text-align: center;
+            color: #f00;
+        }
 
     </style>
 </head>
@@ -40,6 +47,7 @@
         <h2>Войти на сайт</h2>
         <input type="text" name="login" placeholder="введите логин">
         <input type="password" name="pass" placeholder="введите пароль">
+        <span><?= $_SESSION['error'] ?></span>
         <button>Войти</button>
     </Form>
 
