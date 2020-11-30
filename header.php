@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['auth'])){
+	header('Location:'.$_SERVER['HTTP_ORIGIN'].'/login/');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

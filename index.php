@@ -2,7 +2,7 @@
 <?php include 'modal-form-add.php'?>
 
 
-	<a href="#" id="add-student" class="btn btn-success">Добавить студентов</a>
+<a href="#" id="add-student" class="btn btn-success">Добавить студентов</a>
 	
 
 <h2 class="title">Список студентов</h2>
@@ -10,8 +10,6 @@
 <div class="main-content">
 	<?php include 'qwery/qwery.php' ?>
 	<?php include 'qwery/getGroups.php' ?>
-
-
 
 	<table class="table table-hover table-dark">
 	<thead>

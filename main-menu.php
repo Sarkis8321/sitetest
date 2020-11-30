@@ -14,7 +14,11 @@
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="groups.php">Группы</a>
-      </li>
+    </li>
     </ul>
+    <span class="profile">
+            <?php print_r($_SESSION['auth']); ?>
+            <a href="/login/logout.php">Выйти</a>
+    </span>
   </div>
 </nav>
