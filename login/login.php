@@ -5,14 +5,22 @@ $login = $_POST['login'];
 $pass = $_POST['pass'];
 
 
-$loginM = "admin";
-$passM = "12345";
+include $_SERVER['DOCUMENT_ROOT'].'/config.php'; 
+
+
+$sqlQ = $db->query("SELECT * FROM `regusers` WHERE `name` = '".$login."' AND `pass` = '".$pass."' ");
+
+$reguser = $sqlQ->fetch_assoc();
+	// завершение подключения
+$db->close();
 
 unset($_SESSION['error']);
 
-if (($login == $loginM) && ($pass == $passM)) {
+if (isset($reguser)) {
 
     $_SESSION['auth'] = $login;
+
+    $_SESSION['auth-array'] = $reguser;
 
     header('Location:'.$_SERVER['HTTP_ORIGIN']);
     exit;
@@ -21,12 +29,6 @@ if (($login == $loginM) && ($pass == $passM)) {
     header('Location:'.$_SERVER['HTTP_ORIGIN'].'/login/');
     exit;
 }
-
-
-
-
-
-
 
 
 ?>

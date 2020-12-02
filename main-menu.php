@@ -16,9 +16,15 @@
         <a class="nav-link" href="groups.php">Группы</a>
     </li>
     </ul>
-    <span class="profile">
-            <?php print_r($_SESSION['auth']); ?>
-            <a href="/login/logout.php">Выйти</a>
-    </span>
+
+    <div class="dropdown">
+      <button style="min-width: 160px;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <?php print_r($_SESSION['auth']); ?>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/login/logout.php">Выйти</a>
+      </div>
+    </div>
+
   </div>
 </nav>

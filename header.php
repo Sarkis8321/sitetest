@@ -5,6 +5,9 @@ if (!isset($_SESSION['auth'])){
     exit;
 }
 
+print_r($_SESSION['auth-array']);
+
+
 ?>
 
 <!DOCTYPE html>
