@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 11 2020 г., 14:27
+-- Время создания: Дек 04 2020 г., 13:17
 -- Версия сервера: 8.0.15
 -- Версия PHP: 7.3.9
 
@@ -54,7 +54,30 @@ CREATE TABLE `groups` (
 
 INSERT INTO `groups` (`id`, `group_name`, `course`, `teacher_id`) VALUES
 (1, 'К417ПИ', 4, 1),
-(2, 'К318ПИ', 3, 3);
+(2, 'К318ПИ', 3, 3),
+(3, 'К219ПИ', 2, 4),
+(4, 'К120ПИ', 1, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `regusers`
+--
+
+CREATE TABLE `regusers` (
+  `id` int(10) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL,
+  `role` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `regusers`
+--
+
+INSERT INTO `regusers` (`id`, `name`, `pass`, `role`) VALUES
+(1, 'admin', '12345', 1),
+(2, 'user', '12345', 2);
 
 -- --------------------------------------------------------
 
@@ -117,7 +140,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `group_id`, `name`, `surname`, `age`) VALUES
-(1, 1, 'Роман', 'Поздняков', 90),
+(1, 4, 'Роман', 'Поздняков', 90),
 (2, 2, 'Роман', 'Поздняков', 98),
 (3, 1, 'Данил', 'Шаларь', 14),
 (4, 4, 'Дмитрий', 'Богатырев', 13),
@@ -130,7 +153,8 @@ INSERT INTO `users` (`id`, `group_id`, `name`, `surname`, `age`) VALUES
 (12, 4, 'Александр', 'Катунин', 235),
 (16, 1, 'Александр', 'Буханцов', 124),
 (18, 4, 'Максим', 'Купин', 300),
-(19, 2, 'Александр', 'Буханцов', 34);
+(19, 2, 'Александр', 'Буханцов', 34),
+(20, 2, 'Максим', 'Катунин', 45);
 
 --
 -- Индексы сохранённых таблиц
@@ -146,6 +170,12 @@ ALTER TABLE `appraisals`
 -- Индексы таблицы `groups`
 --
 ALTER TABLE `groups`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `regusers`
+--
+ALTER TABLE `regusers`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -180,6 +210,12 @@ ALTER TABLE `appraisals`
 -- AUTO_INCREMENT для таблицы `groups`
 --
 ALTER TABLE `groups`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `regusers`
+--
+ALTER TABLE `regusers`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -198,7 +234,7 @@ ALTER TABLE `teachers`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
