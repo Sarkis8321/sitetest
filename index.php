@@ -1,9 +1,7 @@
 <?php include 'header.php'; ?>
 <?php include 'modal-form-add.php'?>
 
-
 <a href="#" id="add-student" class="btn btn-success">Добавить студентов</a>
-	
 
 <h2 class="title">Список студентов</h2>
 

@@ -4,10 +4,6 @@ if (!isset($_SESSION['auth'])){
 	header('Location:'.$_SERVER['HTTP_ORIGIN'].'/login/');
     exit;
 }
-
-print_r($_SESSION['auth-array']);
-
-
 ?>
 
 <!DOCTYPE html>
