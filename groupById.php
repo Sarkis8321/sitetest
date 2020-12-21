@@ -2,7 +2,6 @@
     $groupId = $_GET['groupid'];
     $groupName = $_GET['groupname'];
 
-
     function getGroupUserById($gId){
         include 'config.php';
         $my_data = $db->query("SELECT * FROM `users` WHERE `users`.`group_id` = ".$gId);
@@ -15,7 +14,7 @@
     }
     include 'header.php'; 
 
-$getUserInfo = getGroupUserById($groupId);
+    $getUserInfo = getGroupUserById($groupId);
 
 ?>
 
@@ -48,6 +47,21 @@ $getUserInfo = getGroupUserById($groupId);
 
 
 
+<?php include 'qwery/getGroupById.php';?>
+
+
+
+<div class="alert alert-success" role="alert">
+    Текущее количество баллов = <?=  $group['balls'] ?>
+</div>
+
+
+<form action="qwery/addGroupBall.php" class="" method="POST">
+    <input type="hidden" name="id" value="<?= $group['id'] ?>">
+    <input type="hidden" name="ball" value="<?= $group['balls'] ?>">
+    <input type="number" name="balls" placeholder="введите баллы">
+    <button>Добавить</button>
+</form>
 
 
 

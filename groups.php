@@ -13,6 +13,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/qwery/getTeachers.php';
 			<td>Название группы</td>
 			<td>Курс</td>
 			<td>Id преподавателя</td>
+			<td>Баллы</td>
 		</tr>
 	</thead>
   <tbody>
@@ -26,6 +27,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/qwery/getTeachers.php';
 			</td>
 			<td><?php echo $value['course'] ?></td>
             <td><?php echo $value['teacher_id'] ?></td>
+			<td><?php echo $value['balls'] ?></td>
 		</tr>
 	<?php } ?>
   </tbody>
